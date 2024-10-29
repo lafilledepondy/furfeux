@@ -10,7 +10,7 @@ import java.awt.desktop.ScreenSleepEvent;
 
 public class FenetreJeu extends JPanel implements KeyListener{
     private Terrain terrain;
-    private int tailleCase =35;
+    private int tailleCase = 35;
     private int hauteur, largeur;
     private JFrame frame;
     private int tailleFenetre = 9 * tailleCase;
@@ -67,6 +67,9 @@ public class FenetreJeu extends JPanel implements KeyListener{
 
         int offsetMinLig = (hauteur * tailleCase) - ScreenMinLig;
         int offsetMinCol = (largeur * tailleCase) - ScreenMinYCol;
+
+        drawResistance(g, terrain.getJoueur().getResistance());
+        drawKeys(g, terrain.getJoueur().NbCle());
 
         for (int i = 0; i < this.hauteur; i++) {
             for (int j = 0; j < this.largeur; j++) {
@@ -160,6 +163,26 @@ public class FenetreJeu extends JPanel implements KeyListener{
                 return new Color(255, 4, 4);
             default:
                 return new Color(255, 255, 255);
+        }
+    }
+
+    private void drawResistance(Graphics g, int resistance) {
+        g.setFont(new Font("Ink Free", Font.BOLD, 15));
+        g.setColor(Color.BLUE);
+        g.drawString("Vie: " + resistance, 10, 20); // Adjust position as needed
+    }
+
+    private void drawKeys(Graphics g, int keyCount) {
+        int startX = tailleFenetre - 85;
+        int startY = 10;
+
+        for (int i = 0; i < 3; i++) {  // Assuming max 5 keys can be displayed
+            if (i < keyCount && keyImg != null) {
+                g.drawImage(keyImg, startX + (i * 30), startY, 20, 20, null); // Draw key image
+            } else {
+                g.setColor(Color.WHITE);
+                g.fillRect(startX + (i * 30), startY, 20, 20); // Draw blank space if no key
+            }
         }
     }
 
