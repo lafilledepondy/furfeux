@@ -36,10 +36,9 @@ Furfeux is a Java-based text adventure game where players navigate through a mys
 ## Instructions
 
 1. **Setup:** Clone the repository (https://github.com/lafilledepondy/furfeux.git) and ensure you have Java installed on your system.
-2. **Compilation:** Compile the Java files using your preferred Java compiler.
-3. **Execution:** Run the `Furfeux` class to start the game.
-4. **Gameplay:** Follow on-screen prompts to navigate through the mansion, collect keys, unlock doors, and avoid flames.
-5. **Win/Lose:** The game ends when the player either reaches the exit or runs out of health.
+2. **Compilation/Execution:** Enter this command in your terminal `./run.sh`.
+3. **Gameplay:** Follow on-screen prompts to navigate through the mansion, collect keys, unlock doors, and avoid flames.
+4. **Win/Lose:** The game ends when the player either reaches the exit or runs out of health.
 
 ## Configuration
 
