@@ -2,6 +2,27 @@
 
 Furfeux is a Java-based text adventure game where players navigate through a mysterious mansion while managing their health, avoiding flames, and unlocking doors. The game utilizes a two-dimensional grid representing various types of rooms and obstacles within the mansion.
 
+## Structures 
+```
+/furfeux
+│── README.md
+├── src
+│   ├── Case.java
+│   ├── CaseTraversable.java
+│   ├── Direction.java
+│   ├── FenetreJeu.java
+│   ├── furfeux.jar
+│   ├── Furfeux.java  <-- (main file)
+│   ├── Hall.java
+│   ├── Images/  <-- (directory for assets)
+│   ├── Joueur.java
+│   ├── manoir.txt
+│   ├── Mur.java
+│   ├── Porte.java
+│   ├── Sortie.java
+│   ├── Terrain.java
+```
+
 ## Features
 
 - **Dynamic Environment:** The mansion consists of walls, halls of varying heat intensities, exits, and doors that can be opened or closed.
