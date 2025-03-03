@@ -6,6 +6,7 @@ Furfeux is a Java-based text adventure game where players navigate through a mys
 ```
 /furfeux
 │── README.md
+│── run.sh
 ├── src
 │   ├── Case.java
 │   ├── CaseTraversable.java
